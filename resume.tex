@@ -1,0 +1,341 @@
+% CVSID: $Id: resume.tex,v 1.0 2002/03/26 20:10:34 nszots Exp $
+\documentclass{article}
+\pagestyle{empty}                   % remove page numbers
+
+\let\Item\item
+\newcommand\SpecialItem{\renewcommand\item[1][]{\Item[\textbullet~\bfseries##1]}}
+\renewcommand\enddescription{\endlist\global\let\item\Item}
+
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{xcolor}
+
+% override LaTeX default margins
+\addtolength{\topmargin}{-1.0in}
+\setlength{\oddsidemargin}{0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\marginparsep}{-0.1in}  
+\setlength{\parindent}{0mm}         % remove paragraph indents
+
+% shrink text to accommodate a long resume
+\setlength{\textheight}{9.5in}
+\setlength{\marginparwidth}{1.1in}
+
+\definecolor{lightred}{RGB}{180, 0, 0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\reversemarginpar        % margin notes to the left-hand side for resume
+
+                % address stuff.  The \hspace*{\fill} is
+                % necessary to get things laid out
+                % correctly.  The sizes fed to \vspace are
+                % variable, depending on how much
+                % whitespace you want, and how much
+				% stuff you're trying to fit on a page....
+
+\fontseries{m}
+
+\begin{tabular}{lr}
+
+  \fontsize{8}{8}
+  \selectfont
+
+  & \hspace*{3.05in} \\
+  \textcolor{lightred}{{\fontsize{17.28}{17.28} \bf Nandor Tibor Szots}} &
+ 
+  \fontsize{8}{8}
+  \selectfont
+  \begin{tabular}[b]{l}
+    6236 Lisieux Terrace \\
+    San Diego, CA 92120 \\
+    +1 858 442 1888 \\
+    nandor@szots.com
+  \end{tabular}
+
+\end{tabular}
+
+\fontsize{12}{13}
+\selectfont
+
+\rule{5.7in}{0.02in}
+% In 2014 Objective statements are outdated.
+%\par
+%\vspace{2\baselineskip}
+%\marginpar{{\fontsize{12}{13} \bf Objective}}
+%To attain a position as a technical director or lead software engineer for a
+%cutting-edge technology company.
+
+                % if the \marginpar is at the beginning
+                % of the line, it loses.  *sigh*.  This
+                % is a typical entry in a resume.   (I'm
+                % defining an entry as something
+                % important enough to have a marginal note
+                % setting it off.)  Give it some space
+                % with \vspace, use \par to break
+                % between paragraphs, enter your text,
+                % and place the \marginpar at the end.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\par
+%\vspace{2\baselineskip}
+%\marginpar{{\fontsize{12}{13} \bf Completed \hspace*{\fill} \linebreak Projects}} 
+%\vspace{\baselineskip}
+%{\bf Optimizing Compiler} 
+%\par
+%\vspace{.03in}
+
+%\textit{Frontend}: Designed and implemented an 
+%intermediate code generator that takes target source code to an
+%intermediate representation via a lexical analyzer,
+%LALR(1) parser, and code generator.  Development under Solaris in flex, 
+%bison and C. \hfill
+
+%\par
+%\vspace{\baselineskip}
+%{\bf Linux Kernel Modules} \hspace*{\fill}
+%\linebreak
+%\textit{Thread Safe System Call}: Added a system call to the Linux 
+%kernel, which was thread safe.  Thread safety was implemented with
+%both semaphores and wait queues. \hspace*{\fill}
+%\linebreak
+%\textit{Memory Mapped Device}: Wrote a Linux block device driver for
+%a 2 megabyte phantom PC card, which was implemented as two 1 megabyte
+%devices, using a memory mapped interface. \hspace*{\fill}
+%\linebreak
+%\textit{Virtual File System}: Wrote a pure memory virtual file system
+%which supported reads, writes, and truncates.
+
+%\textit{http://people.ucsc.edu/\textasciitilde lphillip/TIspecs.pdf}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\par
+\vspace{2\baselineskip}
+                % This is a slightly more complicated
+                % example.  \vspace gets a `doublespace'
+                % (2\baselineskip) between entries, and
+                % a  `singlespace' between paragraphs of
+                % an entry.
+                % (2\baselineskip means twice the value
+                % of \baselineskip).  
+\marginpar{\textcolor{lightred}{{\fontsize{12}{13}\bf Personal \hspace*{\fill} \linebreak Profile}}}
+\par
+A self-motivated engineer and a dynamic leader that inspires greatness in his teams.  Possessing extensive
+experience in building, leading, mentoring and motivating teams of engineers that consistently deliver projects on time and
+reliably in any environment.  Also has a proven track record of designing practical solutions to complex problems - while
+ensuring maintainability and reusability.
+\par
+\vspace{\baselineskip}
+\marginpar{\textcolor{lightred}{{\fontsize{12}{13}\bf Work \hspace*{\fill} \linebreak Experience}}}
+\vspace{\baselineskip}
+{\bf Sony Online Entertainment}
+\hfill {\bf January 2013 - Present}
+\vspace{.03in}
+\par
+Projects: EverQuest II, EverQuest Next and EverQuest Landmark
+\par
+Position: Technical Director
+\vspace{.03in}
+\par
+Worked with other technical personnel on developing new company-wide
+technologies.  Helped design and architect key systems for new and existing
+games.
+\par
+\vspace{\baselineskip}
+Responsible personnel decisions on EverQuest II.  Interviewed engineers for
+positions on both EverQuest II and EverQuest Next.
+\par
+\vspace{\baselineskip}
+Responsible for leading a team of C++ and Web Developers in building the
+in-game marketplace and showcase for display and real-time sale of both player and SOE created items - 
+\href{https://www.landmarkthegame.com/showcase}{Landmark Showcase}.  This
+feature was designed and brought to market in a record 6 months and accounts
+for over 50\% of the profits of the game.
+\par
+\vspace{\baselineskip}
+Designed, Architected and Lead the Team in Implementing: 
+\vspace{\baselineskip}
+\SpecialItem
+\begin{itemize}
+  \item[]Backend C++ servers which control the searching of and sale of these items.
+  \item[]Recommendation system to suggest purchases to users.
+  \item[]UI for creating player made items, along with UI Artists  and Producers to make sure all needs were met.
+  \item[]Web Based UI through which players can search for and find items to purchase.  This UI was the same both in and out of game to ensure a unified code-base which required minimal effort to keep synchronized between the two UIs.
+  \item[]Daily digest e-mail of products which is personalized based on a users interests.
+\end{itemize}
+
+\vspace{\baselineskip}
+{\bf Sony Online Entertainment}
+\hfill {\bf January 2012 - January 2013}
+\vspace{.03in}
+\par
+Project: EverQuest II
+\par
+Position: Lead Programmer
+\vspace{.03in}
+\par
+Lead a team of programmers in developing new features and
+refreshing, enhancing and giving new purpose to previously used features in
+the popular EverQuest II MMORPG. 
+\par
+Responsible for architecting new systems, Full Team
+scheduling, project time estimates, and daily tasking of the EverQuest II code team.
+\par
+
+\pagebreak
+
+\vspace{\baselineskip}
+{\bf Sony Online Entertainment} 
+\hfill {\bf January 2006 - January 2012} 
+\par
+\vspace{.03in}
+Project: EverQuest II
+\par
+Position: Senior Programmer
+\vspace{.03in}
+\par
+Implemented the EverQuest II and EverQuest II: Extended marketplace functionality
+including: all back-end commerce and server-side communications.  Transitioned
+the original implementation of the marketplace into a highly successful Free-to-Play 
+model, while maintaining a non-Free-to-Play service as well.
+\par
+Responsible for all marketplace improvements, changes and new technology
+development.
+\par
+Responsible for live-game maintenance, including daily investigation of both client
+and server crashes by using Linux core dumps and Windows mini-dumps to identify
+and resolve issues. 
+\par
+
+\vspace{\baselineskip}
+Designed and implemented a tool for third-party sites to be able to obtain
+information about in-game characters, items and spells.  This system used 
+EDB and X-Path to index XML blob data for fast searching of relevant game data.
+\par
+
+\vspace{\baselineskip}
+Implemented a spam filter for all game messages to combat the growing spam
+problems.  The filter has a 99\% accuracy rate and blocks on the order of
+500,000 messages per day.
+\par
+
+\vspace{\baselineskip}
+Updated and maintained game servers and client in C++/STL.  Implemented new 
+game systems and features based on player feedback.  Worked with the Test Server 
+community to build a stronger relationship between development and players.
+\par
+
+\vspace{\baselineskip}
+Acted as the game team's point of contact for internationalization across over 4
+locales including Russian, French, German, and Japanese.  Developed code which
+allowed for faster identification of strings requiring localization and reduced 
+redundancy in localizing dynamic game data.
+\par
+
+\vspace{\baselineskip}
+Created designer tools for fast indexed searching of over 
+50 gigabytes of game data.  These tools were rapidly developed using GNU/Linux, 
+perl, php, apache and other open source tools.
+\par
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+{\bf General Atomics - Lynx Systems} 
+\hfill {\bf January 2003 - January 2006} 
+\par
+Position: Lead Software Engineer
+\vspace{.03in}
+\par
+Wrote embedded C, compiled for vxWorks running on various VME boards.  
+\par
+Projects included: View Manager Board which displayed radar imagery in near-real-time
+using OpenGL; Lynx Ground Control Station: received radar imagery via a
+high-speed serial (RS422) data link, decompressed, displayed and forwarded
+images to other systems via Ethernet; Utility applications: allowed for
+quick and easy loading of code onto radars which consisted of a C back-end
+running on the radar and a C\# user interface running on a PC.  
+\par
+
+\vspace{\baselineskip}
+Trouble shot various hardware and software problems in the field as a radar
+integration specialist.  Part of integration team for FireScout, and KingAir.
+Software integration lead for Predator B.
+\par
+
+\pagebreak
+
+
+\vspace{\baselineskip}
+Software Engineering Lead on SAR/GMTI project.
+
+\vspace{\baselineskip}
+{\bf AudioTalk Inc. / HearMe Inc.} 
+\hfill {\bf June 1998 - July 2001} 
+\par
+Position:  Junior Engineer / Operations Engineer
+\vspace{.03in}
+\par
+\textit{Development}: Helped develop various client and server 
+MSVC++ applications for HearMe's VoIP chat solution.  Developed 
+server side APIs in Perl and C.  The APIs were integrated into 
+both WinNT and Linux environments, which handled all the core messaging
+in the AudioTalk / HearMe products.
+\par
+\textit{Operations}: Helped build up, integrate and maintain the AudioTalk and HearMe VoIP 
+networks.  This included server setup, installation and maintenance; both 
+internally and at customer sites.  Wrote C, Perl and other various CGI 
+scripts to automate the network maintenance and ensure stability.
+
+\vspace{\baselineskip}
+{\bf University of California, Santa Cruz} 
+\hfill {\bf December 1998 - December 2002}
+\par
+Position:  Student Grader/Lab Assistant/Volunteer Tutor
+\par
+\vspace{.03in}
+Graded for many upper and lower division computer science programming 
+classes.  Assisted students with learning the Unix environment, including
+make, gcc, gmake, and general Unix commands (ls, ps, vi, etc.)
+
+\vspace{\baselineskip}
+{\bf University of California, Santa Cruz} 
+\hfill {\bf December 1998 - June 2000}
+\par
+Position:  Residential Computer Coordinator
+\par
+\vspace{.03in}
+Setup and configured students' computers to work on the school network.
+This included explaining the campus e-mail system, and network guidelines 
+to both students and faculty.
+\par
+\vspace{2\baselineskip}
+\marginpar{\textcolor{lightred}{{\fontsize{12}{13} \bf Education}}}
+{\bf University of California, Santa Cruz} 
+\hspace*{\fill} {\bf 1998 - 2002}
+\par
+\vspace{.03in}
+B.S. in Computer Science.
+%\textit{Design Classes}: Data Structures \& Algorithms, Computer Architecture,
+%Compiler Design, Operating Systems, Comparative Programming Languages, Database Systems;
+%\textit{Theory Classes}: Algorithmics, Language Theory, Theory
+%of Computation and Complexity, Applied Graph Theory and Algorithms, Software Methodology.
+
+% Shouldn't need to mention the mainstream courses.
+\vspace{\baselineskip}
+Relevant Skills:  C, C++, Java, C\#, Online Marketplaces, Monetization System
+Design, OpenGL, Unix\footnote{Linux: Debian, RedHat, SuSE, Slackware;
+Sun: Solaris}, Regular Expressions, vxWorks, Tornado, MS Dev Studio, STL, PL/SQL Dev, vi, gmake, cvs, sh, perl, 
+flex, bison, \LaTeX, assembly language\footnote{RISC: SPARC, MIPS, and Motorola MC68xx (MC68HC11A8)
+assembly}, HTML, Win9x / NT / 2000 / XP / 7, MS-DOS, SQL,
+Databases\footnote{MSDE, Oracle, MySQL, Postgres, EDB, MongoDB}, Perforce, CVS, git, RS-232, RS-422, VME Knowledge.
+\vspace{2\baselineskip}
+
+\par
+
+\marginpar{\textcolor{lightred}{{\fontsize{12}{13} \bf References}}}
+Available upon request.
+
+\end{document}
+
